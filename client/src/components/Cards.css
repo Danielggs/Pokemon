@@ -1,0 +1,8 @@
+.Cards-Container{
+    display: flex; 
+    flex-wrap: wrap;
+    margin:20px;
+    justify-content: space-between;
+    font-size: 50px;
+
+}
