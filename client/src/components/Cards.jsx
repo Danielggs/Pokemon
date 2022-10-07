@@ -19,35 +19,21 @@ export default function Cards(){
     const AllType = useSelector((state)=>state.types)
     const [currentPage, setCurrentPage] = useState(1);
     const [pokePorPage] = useState(16);
-    
-
-
-
-
-
 
     useEffect( () => {
       dispatch(traerTipos())
+      dispatch(traerPokemon())
       },[dispatch])
 
-    useEffect( () => {
-        dispatch(traerPokemon())
-        },[dispatch])
+ 
 
         const indexOfLastPost = currentPage * pokePorPage;
         const indexOfFirstPost = indexOfLastPost - pokePorPage;
         const listPoke = AllPokemon.slice(indexOfFirstPost, indexOfLastPost);
+
         const paginate = pageNumber => setCurrentPage(pageNumber);
 
-        
-
-
-        
-
-       
-
-
-
+      
   return (
 
     <>

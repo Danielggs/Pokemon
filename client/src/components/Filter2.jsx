@@ -7,6 +7,8 @@ import './Filter.css'
 
 const Filter2 = ({list}) => {
       const dispatch = useDispatch()
+
+
   const [checked, setChecked] = useState([]);
 
 const handleCheck = (event) => {
@@ -17,9 +19,13 @@ const handleCheck = (event) => {
     updatedList.splice(checked.indexOf(event.target.value), 1);
   }
   setChecked(updatedList);
+
+  dispatch(filterPokeByType(updatedList))
 };
 
-dispatch(filterPokeByType(checked))
+
+
+
 
 
 
@@ -34,7 +40,7 @@ dispatch(filterPokeByType(checked))
 
           return (
             <div key={index}> <label >
-                    <input type="checkbox" onClick={handleCheck} value={el.name} />
+                    <input type="checkbox" onChange={handleCheck} value={el.name} />
                     <span className="list">{el.name}</span>
                   </label>
               </div>

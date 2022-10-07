@@ -18,7 +18,7 @@ img{
     object-fit: contain;
   }
 
-.card__giratorio-conteudo {
+.card__giratorio-contenido {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -27,12 +27,12 @@ img{
     transform-style: preserve-3d;
 }
 
-.card__giratorio:hover .card__giratorio-conteudo {
+.card__giratorio:hover .card__giratorio-contenido {
     transform: rotateY(180deg);
 }
 
-.card__giratorio-conteudo--frente,
-.card__giratorio-conteudo--traseira {
+.card__giratorio-contenido--frente,
+.card__giratorio-contenido--trasero {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -47,23 +47,23 @@ img{
     flex-direction: column;
 }
 
-.card__giratorio-conteudo--frente {
+.card__giratorio-contenido--frente {
     background: linear-gradient(-229deg, #f19859, #f76b1a);
 }
 
-.card__giratorio-conteudo--traseira {
+.card__giratorio-contenido--trasero {
     background: linear-gradient(229deg, #ff9853, #f67a15);
     color: white;
     transform: rotateY(180deg);
 }
 
-.card__giratorio-conteudo--traseira h1,
-.card__giratorio-conteudo--traseira p {
+.card__giratorio-contenido--trasero h1,
+.card__giratorio-contenido--trasero p {
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.card__giratorio-conteudo--traseira h1 {
+.card__giratorio-contenido--trasero h1 {
     font-size: 1.7rem;
 }
 

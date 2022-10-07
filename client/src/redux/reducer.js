@@ -12,7 +12,8 @@ function rootReducer(state = initialState, action){
         case "GET_POKEMON":
             return{
                 ...state,
-                pokemon: action.payload
+                pokemon: action.payload,
+                copiaPokemon: action.payload
             };
         case "GET_TYPE":
             return{
@@ -21,18 +22,17 @@ function rootReducer(state = initialState, action){
             }
         case "FILTER_BY_TYPE":
               var tipos= action.payload;
-              var  allPoke= state.pokemon
-          
+              var  allPoke= state.copiaPokemon
                 var pokeFilter=[];
-          
                 if(tipos.length!==0){
                     for(let i=0 ; i< tipos.length;i++){
+                    
                         if(i===0){
                              pokeFilter  = allPoke.filter(el=> el.tipo.includes(tipos[i]))
-                            state.copiaPokemon = pokeFilter
+                             allPoke=pokeFilter
+                           
                         }else{
-                            pokeFilter = state.copiaPokemon.filter(el=> el.tipo.includes(tipos[i]))
-                            state.copiaPokemon = pokeFilter;
+                            pokeFilter  = allPoke.filter(el=> el.tipo.includes(tipos[i]))  
                         }  
                    }
 
@@ -40,12 +40,11 @@ function rootReducer(state = initialState, action){
                      pokeFilter= allPoke 
 
                 }
-              
-               console.log( pokeFilter)
           
             return{
                 ...state,
-               pokemon:pokeFilter
+                pokemon:pokeFilter
+                
 
 
             }
