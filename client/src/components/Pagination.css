@@ -1,0 +1,21 @@
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:10px;
+     align-items: center;
+     list-style:none
+}
+
+.page-link{
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    border-color: black;
+    user-select: none;
+    border: 1px solid rgba(223, 108, 20, 0.864);
+    border-radius: 10px;
+    background:rgba(225, 152, 56, 0.271)
+    
+    
+}

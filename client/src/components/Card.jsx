@@ -11,7 +11,11 @@ const Card = ({name,type,image}) => {
         </div>
         <div className="card__giratorio-conteudo--traseira">   
             <h1>{name}</h1>
-            <p>{type}</p>
+            {
+            type.map((el)=>{
+                return <p>{el}</p>
+            }
+            )}
         </div>
     </div>
 </div>

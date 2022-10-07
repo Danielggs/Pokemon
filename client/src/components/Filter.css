@@ -1,0 +1,191 @@
+.Filter-container{
+    display:flex;
+    flex-direction:column;
+    margin:20px
+}
+.Chebox-containter{
+    max-width: 1200px;
+    margin: 0 auto; 
+    display:flex;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.437);
+    border-radius: 30px;
+    
+}
+.Chebox-containter div {
+    margin: 10px
+}
+
+.Chebox-containter div label{
+    cursor: pointer;
+
+}
+.Chebox-containter div label input[type="checkbox"]{
+    
+    display: none;
+   
+
+}
+
+.Chebox-containter div label span{
+    position: relative;
+    color: white;
+    display: inline-block;
+    background: #424242;
+    padding:  15px 30px;
+    color: 555;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+    border-radius: 30px;
+    font-size: 15px;
+    transition:0.5s;
+    user-select: none;
+    overflow: hidden;
+}
+
+.Chebox-containter div label input[type="checkbox"]:checked~span{
+
+    background:white;
+    color: black;
+
+}
+
+.Chebox-containter div:nth-child(1) label input[type="checkbox"]:checked~span{
+
+    background:#98a6b3;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(2) label input[type="checkbox"]:checked~span{
+
+    background:#de3466;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(3) label input[type="checkbox"]:checked~span{
+
+    background:#97b6f0;
+    color: white;
+
+}
+
+.Chebox-containter div:nth-child(4) label input[type="checkbox"]:checked~span{
+
+    background: #bd5ce3;
+    color: white;
+
+}
+
+.Chebox-containter div:nth-child(5) label input[type="checkbox"]:checked~span{
+
+    background:#f5712c;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(6) label input[type="checkbox"]:checked~span{
+
+    background: #decb8d;
+    color: white;
+
+}
+
+.Chebox-containter div:nth-child(7) label input[type="checkbox"]:checked~span{
+
+    background: #9de013;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(8) label input[type="checkbox"]:checked~span{
+
+    background:
+    #3f60c5;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(9) label input[type="checkbox"]:checked~span{
+
+    background:
+    #4b99b8;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(10) label input[type="checkbox"]:checked~span{
+
+    background:
+    #ffa94b;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(11) label input[type="checkbox"]:checked~span{
+
+    background:
+    #3599f0;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(12) label input[type="checkbox"]:checked~span{
+
+    background:
+    #54d94a;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(13) label input[type="checkbox"]:checked~span{
+
+    background:
+    #ffe528;
+    color: black;
+
+}
+.Chebox-containter div:nth-child(14) label input[type="checkbox"]:checked~span{
+
+    background:
+    #fd6c73;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(15) label input[type="checkbox"]:checked~span{
+
+    background:
+    #6ae5d4;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(16) label input[type="checkbox"]:checked~span{
+
+    background:
+    #3870a4;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(17) label input[type="checkbox"]:checked~span{
+
+    background:#544b65;
+    color: whitesmoke;
+
+}
+.Chebox-containter div:nth-child(18) label input[type="checkbox"]:checked~span{
+
+    background:
+    #fb92f5;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(19) label input[type="checkbox"]:checked~span{
+
+    background:black;
+    color: white;
+
+}
+.Chebox-containter div:nth-child(20) label input[type="checkbox"]:checked~span{
+
+    background:#4d0963;
+    color: white;
+
+}
+
+
+
+
+
+
+

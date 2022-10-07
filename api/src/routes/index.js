@@ -11,7 +11,7 @@ const router = Router();
 async function traerPokemon(){
     const arrayPoke= []
 
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 100; i++) {
         const api = await axios(`https://pokeapi.co/api/v2/pokemon/${i}`)
         arrayPoke.push(api.data);
     }

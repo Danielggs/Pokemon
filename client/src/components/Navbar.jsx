@@ -20,6 +20,7 @@ const Navbar = () => {
       <li><span>Contact</span></li>
     </ul>
   </section>
+  
 
     </div>
   )
