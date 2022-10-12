@@ -1,7 +1,10 @@
 import React from 'react'
 import "./NavBar.css"
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
+
+  
   return (
     <div className="container" >
          <section className="top-nav">
@@ -14,10 +17,10 @@ const Navbar = () => {
     <div className='menu-button'></div>
   </label>
     <ul className="menu">
-      <li><span>Inicio</span></li>
-      <li><span>Agregar Pokemon</span></li>
-      <li><span>About me</span></li>
-      <li><span>Contact</span></li>
+    <li><Link className="link" to='/home'><span>Inicio</span></Link></li>
+      <li><Link className="link" to='/create'><span>Agregar Pokemion</span></Link></li>
+      <li><Link className="link" to='#'><span>About me</span></Link></li>
+      <li><Link className="link" to='#'><span>Contact</span></Link></li>
     </ul>
   </section>
   

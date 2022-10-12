@@ -1,20 +1,23 @@
 import React from 'react';
 import {useState } from 'react';
 import {useDispatch} from 'react-redux';
-import {filterPokeByType} from '../redux/actions'
+import {filterPokeByType ,filterCreate} from '../redux/actions'
 
 import './Filter.css'
 
 const Filter2 = ({list}) => {
-      const dispatch = useDispatch()
 
 
-  const [checked, setChecked] = useState([]);
+
+const dispatch = useDispatch()
+ const [checked, setChecked] = useState([]);
 
 const handleCheck = (event) => {
   var updatedList = [...checked];
   if (event.target.checked) {
+    
     updatedList = [...checked, event.target.value];
+
   } else {
     updatedList.splice(checked.indexOf(event.target.value), 1);
   }
@@ -24,9 +27,10 @@ const handleCheck = (event) => {
 };
 
 
-
-
-
+const handleChangeCreate = (e) =>{
+  e.preventDefault();
+  dispatch(filterCreate(e.target.value))
+}
 
 
   return (
@@ -34,10 +38,7 @@ const handleCheck = (event) => {
       <div className="Filter-container">
 
         <div className="Chebox-containter" >
-      
-
         {list.map((el, index) => {
-
           return (
             <div key={index}> <label >
                     <input type="checkbox" onChange={handleCheck} value={el.name} />
@@ -49,10 +50,7 @@ const handleCheck = (event) => {
   
         </div>
         <div className="Select-container">
-             <select>
-              <option value='abc'>alfabeticamente</option>
-        </select>
-            <select >
+            <select onChange={e => handleChangeCreate(e)} >
             <option value='todos'>todos los Pokemion</option>
             <option value='creados'>Agregados recientemente</option>
             <option value='api'>todos los API</option>

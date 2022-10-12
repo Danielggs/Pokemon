@@ -25,11 +25,20 @@
   padding: 0;
 }
 
+.link {
+
+  text-decoration:none;
+  color:white;
+ 
+}
 .menu > li {
   justify-content: top;
   margin: 0 1rem;
   overflow: hidden;
+ 
+ 
 }
+
 
 .menu-button-container {
   display: none;

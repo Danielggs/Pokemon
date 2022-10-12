@@ -2,6 +2,7 @@
 
 const initialState={
     pokemon:[],
+    pokemonDetail:[] ,
     copiaPokemon:[],
     types:[]
 
@@ -14,7 +15,7 @@ function rootReducer(state = initialState, action){
                 ...state,
                 pokemon: action.payload,
                 copiaPokemon: action.payload
-            };
+            }
         case "GET_TYPE":
             return{
                 ...state,
@@ -45,13 +46,57 @@ function rootReducer(state = initialState, action){
                 ...state,
                 pokemon:pokeFilter
                 
-
+            }
+        case "FILTER_CREATE":
+            var  allPokes= state.copiaPokemon
+            const createFilter = action.payload === "creados" ? allPokes.filter(el=> el.create) :  allPokes.filter(el=> !el.create)
+            return{
+                ...state,
+                pokemon: action.payload === "todos" ? state.copiaPokemon :createFilter
+            }
+        case "ORDER_BY_NAME":
+            const sort = action.payload === 'up'?
+            state.pokemon.sort(function(a, b){
+                if(a.name > b.name){
+                    return 1;
+                }
+                if(b.name > a.name){
+                    return -1;
+                }return 0;              
+            }) :  state.pokemon.sort(function(a, b){
+                if(a.name > b.name){
+                    return -1;
+                }
+                if(b.name > a.name){
+                    return 1;
+                }return 0;  
+            })
+          
+        return{
+           ...state,
+           pokemon: sort
 
             }
-
-     
-
-       
+        case "GET_NAME":
+            console.log(action.payload)
+            return{
+                ...state,
+                pokemon:action.payload
+            }
+        case "POST_POKE":
+            return{
+                ...state
+            }
+        case "POKE_BY_ID":
+            return{
+                ...state,
+                pokemonDetail: action.payload,
+            }    
+        case "CLEAR_CARD":
+           return{
+            ...state,
+            pokemonDetail: [],
+           }
         default:
            return state
     }

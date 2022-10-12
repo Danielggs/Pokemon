@@ -1,0 +1,28 @@
+.Card-detail-Container{
+    background: rgba(242, 163, 16, 0.407);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 12px;
+    border: 3px solid black;
+   
+}
+.Card{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    gap:20px;
+    justify-content:center;
+}
+
+.img_detail{
+    box-sizing:border-box;
+
+    background-color: transparent;
+    height: 200px;
+    perspective: 1000px;
+    z-index: 1;
+    
+}
+.img_detail,.name-detail,.tipo-titulo{
+    grid-column:span 2;
+}
+

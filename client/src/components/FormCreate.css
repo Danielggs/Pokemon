@@ -1,0 +1,99 @@
+.form-Container{
+    background: rgba(242, 163, 16, 0.407);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 12px;
+    border: 3px solid black;
+}
+.formulario{
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px
+}
+
+.formulario-label{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor:pointer
+}
+
+.formulario-input{
+    position: relative;
+    border:  3px solid transparent;
+    border-radius: 3px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all
+}
+.formulario-input:focus{
+
+    border:  3px solid #000000;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163 163 163 0.4)
+
+}
+
+.formulario-input-error{
+    font-size: 12px;
+    margin-bottom :0;
+ 
+}
+.formulario-input-error-activo{
+
+    display:block
+
+}
+.formulario-container-name,.Chebox-form,.btn__enviar,.msg-error{
+    grid-column:span 2;
+}
+
+.Chebox-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px
+}
+.formulario-label-tipo{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    grid-column:span 3;
+    
+}
+.msg-error{
+    height:25px;
+    line-height: 25px;
+    background: rgba(255, 118, 118, 0.73);
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none
+  
+}
+.msg-error-activo{
+    display:block
+}
+
+
+.btn__enviar{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.btn{
+    height:45px;
+    line-height:45px;
+    width: 30%;
+    background: black;
+    color:white;
+    font-weight:bold;
+    border:none;
+    border-radius:3px;
+    cursor:pointer;
+    transition: .1s ease all;
+}
+.btn:hover{
+    box-shadow: 3px 0px 30px rgba(163 ,163, 163, 1)
+}
+
+
+
