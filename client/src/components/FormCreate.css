@@ -35,6 +35,7 @@
 }
 
 .formulario-input-error{
+    color:red ;
     font-size: 12px;
     margin-bottom :0;
  
@@ -61,16 +62,19 @@
     
 }
 .msg-error{
+
+    display: none
+  
+}
+.msg-error-activo{
+    display:block;
+    margin:3px;
     height:25px;
     line-height: 25px;
     background: rgba(255, 118, 118, 0.73);
     padding: 0 15px;
     border-radius: 3px;
-    display: none
-  
-}
-.msg-error-activo{
-    display:block
+   
 }
 
 
@@ -94,6 +98,7 @@
 .btn:hover{
     box-shadow: 3px 0px 30px rgba(163 ,163, 163, 1)
 }
+
 
 
 

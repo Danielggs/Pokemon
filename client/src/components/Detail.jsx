@@ -44,7 +44,7 @@ function Detail (props) {
                     speed={Poke[0].speed} peso={Poke[0].weight} altura={Poke[0].height} hp={Poke[0].hp}
                     tipo={Poke[0].tipo}/>
     
-       :<div><h2>nada </h2></div>
+       :<div><h2>Cargando </h2></div>
 
     
       

@@ -67,9 +67,3 @@ img{
     font-size: 1.7rem;
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
-    filter: drop-shadow(2px 2px 5px black);
-    opacity: .7;
-}
